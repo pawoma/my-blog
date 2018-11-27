@@ -1,0 +1,198 @@
+/*reset*/
+a {
+    text-decoration: none;
+    color: #5d5d5d;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f5f5d5;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.wrap {
+    width: 85%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .wrap {
+        width: 100%;
+    }
+
+    .header-search, .main-sidebar {
+        display: none;
+    }
+}
+
+.com-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 20px;
+}
+
+.com-header .header-name {
+    font-size: 16px;
+}
+
+.com-header .header-search {
+
+}
+
+.com-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.com-main .main-body {
+    width: 100%;
+    padding-top: 20px;
+    margin-right: 20px;
+}
+
+.com-main .main-sidebar {
+    width: 200px;
+    border-left: solid 1px #ccc;
+}
+
+.main-sidebar .widget {
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.main-sidebar .widget .title {
+    color: #5d5d5d;
+}
+
+.main-sidebar .widget .content {
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.main-sidebar .recent-posts {
+
+}
+
+article.post {
+    padding: 0 5px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #ececc5;
+    padding-bottom: 8px;
+}
+
+.post .post-title {
+    font-size: 24px;
+}
+
+.post .post-meta {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.post .post-excerpt {
+    margin: 8px 0 13px 0;
+    word-wrap: break-word;
+    line-height: 1.6;
+}
+
+.post .post-content {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+.post .read-more {
+}
+
+/*评论*/
+.comment-title {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.comment-form .form-row {
+    margin-top: .6rem;
+}
+
+.comment-form .form-row input, comment-form .form-row textarea {
+    border: solid 1px #ccc;
+    /*width:10vw;*/
+}
+
+.comment-form .form-row input {
+    line-height: 1.6rem;
+    width: 12rem;
+}
+
+.comment-content label {
+    vertical-align: top;
+}
+
+.comment-content textarea {
+    vertical-align: top;
+    resize: none;
+    width: 80%;
+    height: 150px;
+}
+
+.comment-btn {
+    margin-left: 2.9rem;
+    padding: .3rem 2rem;
+    font-size: 1rem;
+}
+
+.comment-list-panel {
+    margin-top: 1.2rem;
+}
+
+.comment-item {
+    border-bottom: solid 1px #ccc;
+    margin-top: 1rem;
+
+}
+
+.comment-item .nickname, .comment-item .submit-date {
+    color: #777777;
+    font-size: .8rem;
+
+}
+
+.comment-item .text {
+    font-size: 0.9rem;
+    padding: 4px 0 10px 0;
+    line-height: 1.5;
+
+}
+
+.com-footer {
+    /*text-align: right;*/
+    /*padding-top: 20px;*/
+    /*border-top: solid 1px #ccc;*/
+    /*color: #b9b9b9;*/
+}

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load blog_tags %}
+
+{% block main %}
+    {% for post in post_list %}
+        <article class="post post-{{ post.pk }}">
+            <h1 class="post-title">
+                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+            </h1>
+            <div class="post-meta">
+                <span class="post-date">{{ post.created_time }}</span>
+                <span class="views-count">阅读({{ post.views }})</span>
+            </div>
+            <div class="post-excerpt">{{ post.excerpt }}</div>
+            <div class="read-more">
+                <a href="{{ post.get_absolute_url }}" class="more-link">继续阅读→ </a>
+            </div>
+        </article>
+    {% empty %}
+        <div class="no-post">暂时还没有发布的文章！</div>
+    {% endfor %}
+{% endblock main %}
+
+
+{% block sidebar %}
+<div class="main-sidebar">
+    <div class="widget recent-posts">
+        <h3 class="title">最新文章</h3>
+        {% get_recent_posts as recent_post_list %}
+        <ul class="content">
+            {% for post in recent_post_list %}
+                <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+            {% empty %}
+                暂无文章
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="widget archives">
+        <h3 class="title">归档</h3>
+        {% archives as date_list %}
+        <ul class="content">
+            {% for date in date_list %}
+                <li>
+                    <a href="{% url 'blog:archives' date.year date.month %}">{{ date.year }}年{{ date.month }}月</a>
+                </li>
+            {% empty %}
+                暂无归档
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="widget category">
+        <h3 class="title">分类</h3>
+        {% get_categories as categories %}
+        <ul class="content">
+            {% for cate in categories %}
+                <li>
+                    <a href="{% url 'blog:category' cate.pk %}">{{ cate.name }}<span
+                            class="post-count">(13)</span></a>
+                </li>
+            {% empty %}
+                暂无分类
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock sidebar %}
+

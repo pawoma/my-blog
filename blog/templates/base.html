@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>李鹏程的网络日志</title>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+    <link rel="stylesheet" href="{% static 'blog/css/custom.css' %}">
+</head>
+
+<body>
+<div class="wrap">
+    <header class="com-header">
+        <div class="header-name">
+            <a href="{% url 'blog:index' %}">李鹏程的网络日志</a>
+        </div>
+        <div class="header-search">
+            <input type="search" placeholder="搜索" required>
+            <button type="submit">搜索</button>
+        </div>
+    </header>
+    <main class="com-main">
+        <div class="main-body">
+            {% block main %}
+            {% endblock main %}
+        </div>
+        {% block sidebar %}
+        {% endblock sidebar %}
+    </main>
+    <footer class="com-footer"></footer>
+</div>
+
+
+</body>
+
+</html>
